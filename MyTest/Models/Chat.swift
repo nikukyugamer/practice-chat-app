@@ -11,4 +11,15 @@ import Foundation
 struct Chat: Decodable, Identifiable {
     let id: String
     let messages: [Message]
+
+    // 値を返す計算プロパティ
+    var recentMessageText: String {
+        guard let recentMessage = self.messages.last else {
+            return ""
+        }
+
+        return recentMessage.text
+    }
 }
+
+
