@@ -11,6 +11,8 @@ struct ChatView: View {
 
     // @State　は、プロパティの値が変更されるとともに View の表示が変更される
     @State private var textFieldText: String = ""
+    // TODO: @FocusState とは
+    @FocusState private var textFieldFocused: Bool
 
     // var でなくてはいけない
     // ObservableObject に準拠していなくてはならない
@@ -58,6 +60,9 @@ extension ChatView {
             .padding(.top, 72)
         }
         .background(.cyan)
+        .onTapGesture {
+            textFieldFocused = false
+        }
     }
 
     private var inputArea: some View {
@@ -85,6 +90,7 @@ extension ChatView {
                 .onSubmit {
                     sendMessage()
                 }
+                .focused($textFieldFocused) // TODO: ドルマーク？
             Image(systemName: "mic")
                 .font(.title2)
         }
@@ -112,7 +118,11 @@ extension ChatView {
     }
 
     private func sendMessage() {
-        // TODO: textFieldText？ $がつかない？
-        vm.addMessage(text: textFieldText)
+        if !textFieldText.isEmpty {
+            // TODO: textFieldText？ $がつかない？
+            vm.addMessage(text: textFieldText)
+            // @State なので、変更したらビューが再描画される
+            textFieldText = ""
+        }
     }
 }
