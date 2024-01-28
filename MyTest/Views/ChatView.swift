@@ -105,6 +105,7 @@ extension ChatView {
     }
 
     private func sendMessage() {
-        vm.addMessage()
+        // TODO: TextFiledText？
+        vm.addMessage(text: TextFieldText)
     }
 }

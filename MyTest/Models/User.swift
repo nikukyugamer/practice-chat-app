@@ -14,7 +14,10 @@ struct User: Decodable {
 
     // TODO: 計算プロパティなので var で定義する
     var isCurrentUser: Bool {
-        // 一行の場合は return は省略できる
-        return self.id == "1"
+        return self.id == User.currentUser.id
+    }
+
+    static var currentUser: User {
+        User(id: "1", name: "一郎", image: "user01")
     }
 }
