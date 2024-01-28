@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BEDF235F2B65E56200530459 /* MyTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF235E2B65E56200530459 /* MyTestApp.swift */; };
-		BEDF23612B65E56200530459 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF23602B65E56200530459 /* ContentView.swift */; };
+		BEDF235F2B65E56200530459 /* ChatViewWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */; };
 		BEDF23632B65E56400530459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF23622B65E56400530459 /* Assets.xcassets */; };
 		BEDF23662B65E56400530459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF23652B65E56400530459 /* Preview Assets.xcassets */; };
+		BEDF236D2B65E99D00530459 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF236C2B65E99D00530459 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BEDF235B2B65E56200530459 /* MyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEDF235E2B65E56200530459 /* MyTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTestApp.swift; sourceTree = "<group>"; };
-		BEDF23602B65E56200530459 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewWithSwiftUIApp.swift; sourceTree = "<group>"; };
 		BEDF23622B65E56400530459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDF23652B65E56400530459 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BEDF236C2B65E99D00530459 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,8 @@
 		BEDF235D2B65E56200530459 /* MyTest */ = {
 			isa = PBXGroup;
 			children = (
-				BEDF235E2B65E56200530459 /* MyTestApp.swift */,
-				BEDF23602B65E56200530459 /* ContentView.swift */,
+				BEDF236C2B65E99D00530459 /* ChatView.swift */,
+				BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */,
 				BEDF23622B65E56400530459 /* Assets.xcassets */,
 				BEDF23642B65E56400530459 /* Preview Content */,
 			);
@@ -137,8 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDF23612B65E56200530459 /* ContentView.swift in Sources */,
-				BEDF235F2B65E56200530459 /* MyTestApp.swift in Sources */,
+				BEDF235F2B65E56200530459 /* ChatViewWithSwiftUIApp.swift in Sources */,
+				BEDF236D2B65E99D00530459 /* ChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

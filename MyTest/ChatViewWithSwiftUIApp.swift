@@ -8,11 +8,11 @@
 import SwiftUI
 
 @main // アプリのエントリポイントを示す
-struct MyTestApp: App {
+struct ChatViewWithSwiftUIApp: App {
     var body: some Scene {
         // アプリが起動したときに表示される画面
         WindowGroup {
-            ContentView()
+            ChatView()
         }
     }
 }
