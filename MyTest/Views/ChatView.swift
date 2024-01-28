@@ -145,7 +145,8 @@ extension ChatView {
     }
 
     private func scrollToLast(proxy: ScrollViewProxy) {
-        if let lastMessage = vm.messages.last {
+        if let lastMessage = chat.messages.last {
+            // TODO: lastMessage.id はどうやって検出されるのか？
             proxy.scrollTo(lastMessage.id, anchor: .bottom)
         }
     }

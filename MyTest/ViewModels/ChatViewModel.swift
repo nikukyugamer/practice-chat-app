@@ -11,11 +11,9 @@ class ChatViewModel: ObservableObject {
 
     // チャットルームがたくさん入っている
     @Published var chatData: [Chat] = []
-    @Published var messages: [Message] = []
 
     init() {
         chatData = fetchChatDate()
-        messages = chatData[0].messages // 仮のデータ
     }
 
     private func fetchChatDate() -> [Chat] {
