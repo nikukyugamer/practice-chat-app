@@ -40,8 +40,11 @@ extension ChatView {
         // Message エリア
         ScrollView {
             VStack(spacing: 0) {
-                ForEach(0..<15) { _ in
-                    MessageRow() // カッコを付ける必要がある
+                // TODO: \.id とは？
+//                ForEach(vm.messages, id: \.id) { _ in
+                ForEach(vm.messages) { message in
+                    // TODO: message: message とは？
+                    MessageRow(message: message) // カッコを付ける必要がある
                 }
             }
             .padding(.horizontal)

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Message: Decodable {
+// TODO: Identifiable とは？
+struct Message: Decodable, Identifiable {
     let id: String
     let text: String
     let user: User
