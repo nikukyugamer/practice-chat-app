@@ -9,6 +9,7 @@ import Foundation
 
 class ChatViewModel: ObservableObject {
 
+    // チャットルームがたくさん入っている
     var chatData: [Chat] = []
     @Published var messages: [Message] = []
 

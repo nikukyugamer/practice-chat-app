@@ -49,9 +49,9 @@
 		BE1005082B65F00000F8CF80 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BE1005182B66411400F8CF80 /* ListView.swift */,
 				BEDF236C2B65E99D00530459 /* ChatView.swift */,
 				BE1005062B65EFF300F8CF80 /* MessageRow.swift */,
-				BE1005182B66411400F8CF80 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

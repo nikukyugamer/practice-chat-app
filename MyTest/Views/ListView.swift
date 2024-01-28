@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ListView: View {
+
+    // ListView の中から ChatViewModel のプロパティにアクセスできる
+    @ObservedObject var vm: ChatViewModel = ChatViewModel()
+
     var body: some View {
         NavigationView {
             VStack {
@@ -46,10 +50,12 @@ extension ListView {
     private var list: some View {
         ScrollView {
             VStack {
-                ForEach(0..<5) { _ in
+                // Identifiable プロトコルに準拠させる
+                ForEach(vm.chatData) { chat in
                     // ナビゲーション遷移パターン
                     NavigationLink {
-                        ChatView()
+                        // TODO: chat: chat とは？
+                        ChatView(chat: chat)
                             .toolbar(.hidden)
                     } label: {
                         listRow

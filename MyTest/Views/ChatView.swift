@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
+    let chat: Chat
 
     // @State　は、プロパティの値が変更されるとともに View の表示が変更される
     @State private var textFieldText: String = ""
@@ -42,9 +43,9 @@ struct ChatView: View {
     }
 }
 
-#Preview {
-    ChatView()
-}
+//#Preview {
+//    ChatView()
+//}
 
 extension ChatView {
     // some は型の抽象化
@@ -55,7 +56,7 @@ extension ChatView {
                 VStack(spacing: 0) {
                     // TODO: \.id とは？
     //                ForEach(vm.messages, id: \.id) { _ in
-                    ForEach(vm.messages) { message in
+                    ForEach(chat.messages) { message in
                         // TODO: message: message とは？（キーワード引数？）
                         MessageRow(message: message) // カッコを付ける必要がある
                     }

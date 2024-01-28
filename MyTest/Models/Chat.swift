@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Chat: Decodable {
+// イメージとしては「チャットルーム」
+struct Chat: Decodable, Identifiable {
     let id: String
     let messages: [Message]
 }
