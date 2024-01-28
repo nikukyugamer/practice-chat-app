@@ -65,4 +65,23 @@ class ChatViewModel: ObservableObject {
 //        messages.append(newMessage)
         chatData[index].messages.append(newMessage)
     }
+
+    func getTitle(messages: [Message]) -> String {
+        var title = ""
+        var userIds: [String] = []
+
+        for message in messages {
+            let id = message.user.id
+
+            if id == User.currentUser.id { continue }
+            if userIds.contains(id) { continue }
+
+            userIds.append(id)
+
+            let name = message.user.name
+            title += title.isEmpty ? "\(name)" : ", \(name)"
+        }
+
+        return title
+    }
 }
