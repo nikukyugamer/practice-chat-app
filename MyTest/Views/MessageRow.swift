@@ -12,10 +12,16 @@ struct MessageRow: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            userThumb
-            messageText
-            messageState
-            Spacer()
+            if message.user.isCurrentUser {
+                Spacer()
+                messageState
+                messageText
+            } else {
+                userThumb
+                messageText
+                messageState
+                Spacer()
+            }
         }
         .padding(.bottom)
     }
@@ -45,7 +51,7 @@ extension MessageRow {
     private var messageState: some View {
         VStack(alignment: .trailing) {
             Spacer()
-            if message.readed {
+            if message.readed && message.user.isCurrentUser {
                 Text("既読")
             }
             Text(formattedDateString)
