@@ -12,6 +12,8 @@ struct ChatView: View {
     // @State　は、プロパティの値が変更されるとともに View の表示が変更される
     @State private var textFieldText: String = ""
 
+    let vm: ChatViewModel = ChatViewModel()
+
     var body: some View {
         VStack(spacing: 0) {
             // Message Area（プロパティの呼び出しなのでカッコは不要）
