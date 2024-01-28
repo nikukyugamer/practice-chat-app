@@ -14,6 +14,10 @@ struct ChatView: View {
     // TODO: @FocusState とは
     @FocusState private var textFieldFocused: Bool
 
+    // TODO: これは何？
+    // 遷移した画面を閉じるためのトリガ（dismiss が環境変数とは？）
+    @Environment(\.dismiss) private var dismiss
+
     // var でなくてはいけない
     // ObservableObject に準拠していなくてはならない
     // TODO: まとめ
@@ -52,7 +56,7 @@ extension ChatView {
                     // TODO: \.id とは？
     //                ForEach(vm.messages, id: \.id) { _ in
                     ForEach(vm.messages) { message in
-                        // TODO: message: message とは？
+                        // TODO: message: message とは？（キーワード引数？）
                         MessageRow(message: message) // カッコを付ける必要がある
                     }
                 }
@@ -105,9 +109,15 @@ extension ChatView {
 
     private var navigationArea: some View {
         HStack {
-            // 予め用意されているアイコン（右上の + 記号から Symbol で選べる）
-            Image(systemName: "chevron.backward")
-                .font(.title2)
+            Button {
+                // Action
+                dismiss()
+            } label: {
+                // 予め用意されているアイコン（右上の + 記号から Symbol で選べる）
+                Image(systemName: "chevron.backward")
+                    .font(.title2)
+                    .foregroundColor(.primary)
+            }
             Text("タイトル")
                 .font(.title2.bold())
             Spacer() // 画面を横いっぱいに広げる
