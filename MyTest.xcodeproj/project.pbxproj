@@ -13,6 +13,7 @@
 		BE1005112B661C7500F8CF80 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1005102B661C7500F8CF80 /* Chat.swift */; };
 		BE1005142B661D3200F8CF80 /* chatData.json in Resources */ = {isa = PBXBuildFile; fileRef = BE1005132B661D3200F8CF80 /* chatData.json */; };
 		BE1005172B661E4600F8CF80 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1005162B661E4600F8CF80 /* ChatViewModel.swift */; };
+		BE1005192B66411400F8CF80 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1005182B66411400F8CF80 /* ListView.swift */; };
 		BEDF235F2B65E56200530459 /* ChatViewWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */; };
 		BEDF23632B65E56400530459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF23622B65E56400530459 /* Assets.xcassets */; };
 		BEDF23662B65E56400530459 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF23652B65E56400530459 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		BE1005102B661C7500F8CF80 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		BE1005132B661D3200F8CF80 /* chatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chatData.json; sourceTree = "<group>"; };
 		BE1005162B661E4600F8CF80 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		BE1005182B66411400F8CF80 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		BEDF235B2B65E56200530459 /* MyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewWithSwiftUIApp.swift; sourceTree = "<group>"; };
 		BEDF23622B65E56400530459 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			children = (
 				BEDF236C2B65E99D00530459 /* ChatView.swift */,
 				BE1005062B65EFF300F8CF80 /* MessageRow.swift */,
+				BE1005182B66411400F8CF80 /* ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1005192B66411400F8CF80 /* ListView.swift in Sources */,
 				BE10050B2B6619F800F8CF80 /* User.swift in Sources */,
 				BE1005172B661E4600F8CF80 /* ChatViewModel.swift in Sources */,
 				BE1005112B661C7500F8CF80 /* Chat.swift in Sources */,
