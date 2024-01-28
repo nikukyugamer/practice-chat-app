@@ -10,7 +10,7 @@ import Foundation
 // イメージとしては「チャットルーム」
 struct Chat: Decodable, Identifiable {
     let id: String
-    let messages: [Message]
+    var messages: [Message]
 
     // 値を返す計算プロパティ
     var recentMessageText: String {

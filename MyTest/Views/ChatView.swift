@@ -21,12 +21,14 @@ struct ChatView: View {
 
     // var でなくてはいけない
     // ObservableObject に準拠していなくてはならない
-    // TODO: まとめ
+    // TODO: まとめ（難しい）
     // 1. 画面の構造体の中で、データを保持しているクラスのインスタンスを格納するプロパティに、
     // @ObservedObject というプロパティラッパーを付与する
     // 2. データを保持しているクラスを @ObservableObject プロトコルに準拠させる
     // 3. クラスの中で、変更を反映する値を保持しているプロパティに、 @Published というプロパティラッパーを付与する
-    @ObservedObject var vm: ChatViewModel = ChatViewModel()
+//    @ObservedObject var vm: ChatViewModel = ChatViewModel()
+    // TODO: これは何？
+    @EnvironmentObject var vm: ChatViewModel
 
     var body: some View {
         VStack(spacing: 0) {
@@ -136,7 +138,7 @@ extension ChatView {
     private func sendMessage() {
         if !textFieldText.isEmpty {
             // TODO: textFieldText？ $がつかない？
-            vm.addMessage(text: textFieldText)
+            vm.addMessage(chatId: chat.id, text: textFieldText)
             // @State なので、変更したらビューが再描画される
             textFieldText = ""
         }

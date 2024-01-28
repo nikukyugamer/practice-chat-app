@@ -55,7 +55,9 @@ extension ListView {
                     // ナビゲーション遷移パターン
                     NavigationLink {
                         // TODO: chat: chat とは？
+                        // .environmentObject とは？
                         ChatView(chat: chat)
+                            .environmentObject(vm)
                             .toolbar(.hidden)
                     } label: {
                         listRow(chat: chat)

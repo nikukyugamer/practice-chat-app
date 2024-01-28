@@ -10,7 +10,7 @@ import Foundation
 class ChatViewModel: ObservableObject {
 
     // チャットルームがたくさん入っている
-    var chatData: [Chat] = []
+    @Published var chatData: [Chat] = []
     @Published var messages: [Message] = []
 
     init() {
@@ -43,7 +43,14 @@ class ChatViewModel: ObservableObject {
         }
     }
 
-    func addMessage(text: String) {
+    func addMessage(chatId: String, text: String) {
+        // TODO: 難しい
+        // 最初に合致したものが返る
+        // TODO: where: とは？
+        guard let index = chatData.firstIndex(where: { chat in
+            chat.id == chatId
+        }) else { return }
+
         let newMessage = Message(
             id: UUID().uuidString,
             text: text,
@@ -53,6 +60,7 @@ class ChatViewModel: ObservableObject {
         )
 
         // これだけでは更新されない。なぜならエントリポイントの ChatView() 時のみ表示更新だから
-        messages.append(newMessage)
+//        messages.append(newMessage)
+        chatData[index].messages.append(newMessage)
     }
 }
