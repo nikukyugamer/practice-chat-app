@@ -51,11 +51,15 @@ class ChatViewModel: ObservableObject {
             chat.id == chatId
         }) else { return }
 
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // JSON の文字列の形に合わせる
+        let formattedDateString = formatter.string(from: Date())
+
         let newMessage = Message(
             id: UUID().uuidString,
             text: text,
             user: User.currentUser,
-            date: Date().description,
+            date: formattedDateString,
             readed: false
         )
 
