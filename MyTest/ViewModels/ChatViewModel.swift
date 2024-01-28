@@ -15,7 +15,6 @@ class ChatViewModel {
     init() {
         chatData = fetchChatDate()
         messages = chatData[0].messages // 仮のデータ
-        print(messages)
     }
 
     private func fetchChatDate() -> [Chat] {
@@ -41,5 +40,9 @@ class ChatViewModel {
             fatalError("\(fileName)を\(Chat.self)に変換することに失敗しました。")
 
         }
+    }
+
+    func addMessage() {
+        print("イベントを処理します！")
     }
 }
