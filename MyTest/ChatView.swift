@@ -27,6 +27,23 @@ struct ChatView: View {
                 .padding(.top, 72)
             }
             .background(.cyan)
+
+            // Input エリア
+            // 要素が横に並ぶので HStack
+            HStack {
+                Circle()
+                    .frame(width: 40, height: 40)
+                Circle()
+                    .frame(width: 40, height: 40)
+                Circle()
+                    .frame(width: 40, height: 40)
+                Capsule()
+                    .frame(height: 40)
+                Circle()
+                    .frame(width: 40, height: 40)
+            }
+            .padding()
+            .background(.white)
         }
     }
 }

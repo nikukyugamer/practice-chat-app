@@ -51,8 +51,8 @@
 		BEDF235D2B65E56200530459 /* MyTest */ = {
 			isa = PBXGroup;
 			children = (
-				BEDF236C2B65E99D00530459 /* ChatView.swift */,
 				BEDF235E2B65E56200530459 /* ChatViewWithSwiftUIApp.swift */,
+				BEDF236C2B65E99D00530459 /* ChatView.swift */,
 				BEDF23622B65E56400530459 /* Assets.xcassets */,
 				BEDF23642B65E56400530459 /* Preview Content */,
 			);
