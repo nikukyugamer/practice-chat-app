@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BE1005072B65EFF300F8CF80 /* MessageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1005062B65EFF300F8CF80 /* MessageRow.swift */; };
 		BE10050B2B6619F800F8CF80 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10050A2B6619F800F8CF80 /* User.swift */; };
-		BE10050D2B661A3F00F8CF80 /* DataModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10050C2B661A3F00F8CF80 /* DataModelTest.swift */; };
 		BE10050F2B661B1A00F8CF80 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10050E2B661B1A00F8CF80 /* Message.swift */; };
 		BE1005112B661C7500F8CF80 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1005102B661C7500F8CF80 /* Chat.swift */; };
 		BE1005142B661D3200F8CF80 /* chatData.json in Resources */ = {isa = PBXBuildFile; fileRef = BE1005132B661D3200F8CF80 /* chatData.json */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		BE1005062B65EFF300F8CF80 /* MessageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRow.swift; sourceTree = "<group>"; };
 		BE10050A2B6619F800F8CF80 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BE10050C2B661A3F00F8CF80 /* DataModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTest.swift; sourceTree = "<group>"; };
 		BE10050E2B661B1A00F8CF80 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE1005102B661C7500F8CF80 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		BE1005132B661D3200F8CF80 /* chatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chatData.json; sourceTree = "<group>"; };
@@ -49,7 +47,6 @@
 			children = (
 				BEDF236C2B65E99D00530459 /* ChatView.swift */,
 				BE1005062B65EFF300F8CF80 /* MessageRow.swift */,
-				BE10050C2B661A3F00F8CF80 /* DataModelTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE10050D2B661A3F00F8CF80 /* DataModelTest.swift in Sources */,
 				BE10050B2B6619F800F8CF80 /* User.swift in Sources */,
 				BE1005112B661C7500F8CF80 /* Chat.swift in Sources */,
 				BEDF235F2B65E56200530459 /* ChatViewWithSwiftUIApp.swift in Sources */,
