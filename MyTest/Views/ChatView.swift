@@ -45,24 +45,29 @@ struct ChatView: View {
 extension ChatView {
     // some は型の抽象化
     private var messageArea: some View {
-
-        // Message エリア
-        ScrollView {
-            VStack(spacing: 0) {
-                // TODO: \.id とは？
-//                ForEach(vm.messages, id: \.id) { _ in
-                ForEach(vm.messages) { message in
-                    // TODO: message: message とは？
-                    MessageRow(message: message) // カッコを付ける必要がある
+        ScrollViewReader { proxy in
+            // Message エリア
+            ScrollView {
+                VStack(spacing: 0) {
+                    // TODO: \.id とは？
+    //                ForEach(vm.messages, id: \.id) { _ in
+                    ForEach(vm.messages) { message in
+                        // TODO: message: message とは？
+                        MessageRow(message: message) // カッコを付ける必要がある
+                    }
                 }
+                .padding(.horizontal)
+                .padding(.top, 72)
             }
-            .padding(.horizontal)
-            .padding(.top, 72)
+            .background(.cyan)
+            .onTapGesture {
+                textFieldFocused = false
+            }
+            .onAppear {
+                scrollToLast(proxy: proxy)
+            }
         }
-        .background(.cyan)
-        .onTapGesture {
-            textFieldFocused = false
-        }
+
     }
 
     private var inputArea: some View {
@@ -123,6 +128,12 @@ extension ChatView {
             vm.addMessage(text: textFieldText)
             // @State なので、変更したらビューが再描画される
             textFieldText = ""
+        }
+    }
+
+    private func scrollToLast(proxy: ScrollViewProxy) {
+        if let lastMessage = vm.messages.last {
+            proxy.scrollTo(lastMessage.id, anchor: .bottom)
         }
     }
 }
