@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ChatView: View {
+
+    // @State　は、プロパティの値が変更されるとともに View の表示が変更される
+    @State private var textFieldText: String = ""
+
     var body: some View {
         VStack(spacing: 0) {
             // Message Area（プロパティの呼び出しなのでカッコは不要）
@@ -47,16 +51,27 @@ extension ChatView {
     private var inputArea: some View {
         // 要素が横に並ぶので HStack
         HStack {
-            Circle()
-                .frame(width: 40, height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
-            Capsule()
-                .frame(height: 40)
-            Circle()
-                .frame(width: 40, height: 40)
+            HStack {
+                Image(systemName: "plus")
+                Image(systemName: "camera")
+                Image(systemName: "photo")
+            }
+            .font(.title2)
+
+            // データバインディングのため、$ を用いて参照を渡す必要がある
+            TextField("プレイスホルダ", text: $textFieldText)
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .clipShape(Capsule())
+                .overlay(
+                    Image(systemName: "face.smiling")
+                        .font(.title2)
+                        .padding(.trailing)
+                        .foregroundColor(.gray)
+                    , alignment: .trailing
+                )
+            Image(systemName: "mic")
+                .font(.title2)
         }
         .padding()
         .background(.white)
