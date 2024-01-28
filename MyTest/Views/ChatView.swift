@@ -12,7 +12,14 @@ struct ChatView: View {
     // @State　は、プロパティの値が変更されるとともに View の表示が変更される
     @State private var textFieldText: String = ""
 
-    let vm: ChatViewModel = ChatViewModel()
+    // var でなくてはいけない
+    // ObservableObject に準拠していなくてはならない
+    // TODO: まとめ
+    // 1. 画面の構造体の中で、データを保持しているクラスのインスタンスを格納するプロパティに、
+    // @ObservedObject というプロパティラッパーを付与する
+    // 2. データを保持しているクラスを @ObservableObject プロトコルに準拠させる
+    // 3. クラスの中で、変更を反映する値を保持しているプロパティに、 @Published というプロパティラッパーを付与する
+    @ObservedObject var vm: ChatViewModel = ChatViewModel()
 
     var body: some View {
         VStack(spacing: 0) {
@@ -105,7 +112,7 @@ extension ChatView {
     }
 
     private func sendMessage() {
-        // TODO: TextFiledText？
-        vm.addMessage(text: TextFieldText)
+        // TODO: textFieldText？ $がつかない？
+        vm.addMessage(text: textFieldText)
     }
 }

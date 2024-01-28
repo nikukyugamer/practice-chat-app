@@ -7,10 +7,10 @@
 
 import Foundation
 
-class ChatViewModel {
+class ChatViewModel: ObservableObject {
 
     var chatData: [Chat] = []
-    var messages: [Message] = []
+    @Published var messages: [Message] = []
 
     init() {
         chatData = fetchChatDate()
@@ -50,5 +50,8 @@ class ChatViewModel {
             date: Date().description,
             readed: false
         )
+
+        // これだけでは更新されない。なぜならエントリポイントの ChatView() 時のみ表示更新だから
+        messages.append(newMessage)
     }
 }
